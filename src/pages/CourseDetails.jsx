@@ -1,8 +1,18 @@
+import { useParams } from "react-router-dom";
+import coursesData from "../data/courses";
+
 export default function CourseDetails() {
+  const { id } = useParams();
+  const course = coursesData.find((course) => course.id === parseInt(id));
+
+  if (!course) {
+    return <p>Course not found!</p>;
+  }
+
   return (
-    <div>
-      <h3>This here be course details</h3>
-      <p> corse details right here</p>
+    <div className="container mt-4">
+      <h3>{course.title}</h3>
+      <p>{course.description} </p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptate
         obcaecati, aspernatur veritatis quas temporibus, aperiam neque corporis

@@ -1,16 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
-export default function CourseCard() {
+export default function CourseCard({ id, title, description }) {
   return (
     <div className="card col-6">
       <div className="card-body">
-        <h2 className="card-title">Course card</h2>
-        <p className="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sint
-          quibusdam distinctio natus architecto, atque dolores, voluptas quae
-          modi illum delectus dicta dolorem veritatis. Voluptatum et magni minus
-          architecto nulla!
-        </p>
+        <h2 className="card-title">{title}</h2>
+        <p className="card-text">{description}</p>
+        <Link to={`/courses/${id}`} className="btn btn-primary">
+          Read More
+        </Link>
       </div>
     </div>
   );

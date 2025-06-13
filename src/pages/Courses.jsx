@@ -5,23 +5,27 @@ import { Link } from "react-router-dom";
 
 export default function Courses() {
   return (
-    <div className="container">
-      <h2>Heres the Courses page</h2>
-      <Link to="/register">
-        <Button variant="outlined">Register for a Course</Button>
-      </Link>
-      <p>Insert list of courses in card form here.</p>
-      <div className="container row-md align-items-start ">
-        <div className="row justify-content-around">
-          {coursesData.map((course) => (
+    <div className="container my-5">
+      <div className="¨d-flex justify-content-between align-items-center mb-4">
+        <h2 className="mb-0">Courses</h2>
+        <Link to="/register">
+          <Button variant="outlined" color="primary">
+            Register for a Course
+          </Button>
+        </Link>
+      </div>
+      <p className="text-muted mb-4">List of available courses below.</p>
+
+      <div className="row">
+        {coursesData.map((course) => (
+          <div key={course.id} className="col-12 col-sm-6 col-md-4 mb-4">
             <CourseCard
-              key={course.id}
               id={course.id}
               title={course.title}
               description={course.description}
             />
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

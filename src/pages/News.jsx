@@ -3,7 +3,7 @@ import newsData from "../data/news";
 
 export default function News() {
   return (
-    <div>
+    <div className="container">
       <h2>This is the news page</h2>
       <p>add news/blog stuff here.</p>
       <div className="container">

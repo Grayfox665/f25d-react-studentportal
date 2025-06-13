@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Courses() {
   return (
-    <div>
+    <div className="container">
       <h2>Heres the Courses page</h2>
       <Link to="/register">
         <Button variant="outlined">Register for a Course</Button>

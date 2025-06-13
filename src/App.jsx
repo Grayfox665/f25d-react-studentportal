@@ -6,19 +6,22 @@ import Courses from "./pages/Courses";
 import News from "./pages/News";
 import CourseDetails from "./pages/CourseDetails";
 import Register from "./pages/Register";
+import { RegistrationProvider } from "./context/RegistrationProvider";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/courses/:id" element={<CourseDetails />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-    </div>
+    <RegistrationProvider>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/courses/:id" element={<CourseDetails />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </div>
+    </RegistrationProvider>
   );
 }
 

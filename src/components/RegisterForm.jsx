@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { TextField, Button, MenuItem, Typography, Box } from "@mui/material";
 import coursesData from "../data/courses";
+import { useRegistration } from "../hooks/useRegistration";
 
 export default function RegisterForm() {
+  const { addRegistration } = useRegistration();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,7 +19,8 @@ export default function RegisterForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Registration Data:", formData);
+    const course = coursesData.find((c) => c.id === formData.courseId);
+    addRegistration({ ...formData, courseTitle: course?.title });
 
     setFormData({ name: "", email: "", courseId: "" });
     alert("Registration successful!");

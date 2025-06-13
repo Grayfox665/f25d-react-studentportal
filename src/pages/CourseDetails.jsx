@@ -12,13 +12,8 @@ export default function CourseDetails() {
   return (
     <div className="container mt-4">
       <h3>{course.title}</h3>
+      <p>{course.duration}</p>
       <p>{course.description} </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptate
-        obcaecati, aspernatur veritatis quas temporibus, aperiam neque corporis
-        tenetur necessitatibus sequi, possimus sint esse! Error assumenda
-        temporibus laudantium iste eum!
-      </p>
     </div>
   );
 }

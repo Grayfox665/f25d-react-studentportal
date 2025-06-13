@@ -11,7 +11,7 @@ export default function Courses() {
         <Button variant="outlined">Register for a Course</Button>
       </Link>
       <p>Insert list of courses in card form here.</p>
-      <div className="container row-md row-cols-2 align-items-start ">
+      <div className="container row-md align-items-start ">
         <div className="row justify-content-around">
           {coursesData.map((course) => (
             <CourseCard

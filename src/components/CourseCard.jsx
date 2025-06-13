@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function CourseCard({ id, title, description }) {
   return (
-    <div className="card col-6">
+    <div className="card">
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p className="card-text">{description}</p>

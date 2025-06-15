@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 export default function Courses() {
   return (
     <div className="container my-5">
-      <div className="¨d-flex justify-content-between align-items-center mb-4">
-        <h2 className="mb-0">Courses</h2>
+      <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <h2 className="mb-0 ">Courses</h2>
         <Link to="/register">
           <Button variant="outlined" color="primary">
             Register for a Course

@@ -14,6 +14,7 @@ export default function CourseDetails() {
       <h3>{course.title}</h3>
       <p>{course.duration}</p>
       <p>{course.description} </p>
+      <p>Teacher : {course.teacher}</p>
     </div>
   );
 }

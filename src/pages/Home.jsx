@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="container my-5">
       <h2>This is the home page</h2>
-      <p>home page stuff fluff</p>
+      <p>Here you will see what courses you have registered to</p>
       <div className="card shadow">
         <div className="card-body">
           <h3>The current courses you are registered to:</h3>
